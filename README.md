@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/github/spec-kit/actions/workflows/release.yml"><img src="https://github.com/github/spec-kit/actions/workflows/release.yml/badge.svg" alt="Release"/></a>
-    <a href="https://github.com/github/spec-kit/stargazers"><img src="https://img.shields.io/github/stars/github/spec-kit?style=social" alt="GitHub stars"/></a>
-    <a href="https://github.com/github/spec-kit/blob/main/LICENSE"><img src="https://img.shields.io/github/license/github/spec-kit" alt="License"/></a>
-    <a href="https://github.github.io/spec-kit/"><img src="https://img.shields.io/badge/docs-GitHub_Pages-blue" alt="Documentation"/></a>
+    <a href="https://github.com/Dong237/spec-kit/actions/workflows/release.yml"><img src="https://github.com/Dong237/spec-kit/actions/workflows/release.yml/badge.svg" alt="Release"/></a>
+    <a href="https://github.com/Dong237/spec-kit/stargazers"><img src="https://img.shields.io/github/stars/Dong237/spec-kit?style=social" alt="GitHub stars"/></a>
+    <a href="https://github.com/Dong237/spec-kit/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Dong237/spec-kit" alt="License"/></a>
+    <a href="https://github.com/Dong237/spec-kit"><img src="https://img.shields.io/badge/docs-GitHub-blue" alt="Documentation"/></a>
 </p>
 
 ---
@@ -82,7 +82,7 @@ Spec-Driven Development **flips the script** on traditional software development
 
 ## ⚡ Get Started
 
-### 1. Install Specify CLI
+### 1. Install Specify CLI Pro
 
 Choose your preferred installation method:
 
@@ -91,7 +91,7 @@ Choose your preferred installation method:
 Install once and use everywhere:
 
 ```bash
-uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+uv tool install specify-cli-pro --from git+https://github.com/Dong237/spec-kit.git
 ```
 
 Then use the tool directly:
@@ -109,10 +109,10 @@ specify init --here --ai claude
 specify check
 ```
 
-To upgrade Specify, see the [Upgrade Guide](./docs/upgrade.md) for detailed instructions. Quick upgrade:
+To upgrade Specify Pro, see the [Upgrade Guide](./docs/upgrade.md) for detailed instructions. Quick upgrade:
 
 ```bash
-uv tool install specify-cli --force --from git+https://github.com/github/spec-kit.git
+uv tool install specify-cli-pro --force --from git+https://github.com/Dong237/spec-kit.git
 ```
 
 #### Option 2: One-time Usage
@@ -120,7 +120,7 @@ uv tool install specify-cli --force --from git+https://github.com/github/spec-ki
 Run directly without installing:
 
 ```bash
-uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME>
+uvx --from git+https://github.com/Dong237/spec-kit.git specify init <PROJECT_NAME>
 ```
 
 **Benefits of persistent installation:**
@@ -788,11 +788,11 @@ rm gcm-linux_amd64.2.6.1.deb
 
 ## 💬 Support
 
-For support, please open a [GitHub issue](https://github.com/github/spec-kit/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
+For support, please open a [GitHub issue](https://github.com/Dong237/spec-kit/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
 
 ## 🙏 Acknowledgements
 
-This project is heavily influenced by and based on the work and research of [John Lam](https://github.com/jflam).
+Spec Kit Pro is built on top of [GitHub's Spec Kit](https://github.com/github/spec-kit), which was created by [John Lam](https://github.com/jflam) and [Den Delimarsky](https://github.com/localden). The Pro version adds UI/UX artifact generation capabilities.
 
 ## 📄 License
 
