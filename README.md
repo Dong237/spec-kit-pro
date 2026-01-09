@@ -1,11 +1,11 @@
 <div align="center">
-    <img src="./media/logo_large.webp" alt="Spec Kit Logo" width="200" height="200"/>
-    <h1>🌱 Spec Kit</h1>
-    <h3><em>Build high-quality software faster.</em></h3>
+    <img src="./media/logo_large.webp" alt="Spec Kit Pro Logo" width="200" height="200"/>
+    <h1>🚀 Spec Kit Pro</h1>
+    <h3><em>Build high-quality software faster. Now with full UI/UX support.</em></h3>
 </div>
 
 <p align="center">
-    <strong>An open source toolkit that allows you to focus on product scenarios and predictable outcomes instead of vibe coding every piece from scratch.</strong>
+    <strong>An open source toolkit for Spec-Driven Development with first-class support for complex UI applications, mobile apps, and full UX artifact generation.</strong>
 </p>
 
 <p align="center">
@@ -19,8 +19,10 @@
 
 ## Table of Contents
 
+- [🆕 What's New in Pro](#-whats-new-in-pro)
 - [🤔 What is Spec-Driven Development?](#-what-is-spec-driven-development)
 - [⚡ Get Started](#-get-started)
+- [🎨 UX Workflow for Complex Apps](#-ux-workflow-for-complex-apps)
 - [📽️ Video Overview](#️-video-overview)
 - [🤖 Supported AI Agents](#-supported-ai-agents)
 - [🔧 Specify CLI Reference](#-specify-cli-reference)
@@ -35,6 +37,44 @@
 - [💬 Support](#-support)
 - [🙏 Acknowledgements](#-acknowledgements)
 - [📄 License](#-license)
+
+## 🆕 What's New in Pro
+
+Spec Kit Pro extends the original toolkit with **first-class UI/UX support** for building complex applications:
+
+| Feature | Description |
+|---------|-------------|
+| **User Flow Diagrams** | Generate Mermaid flowcharts for every user journey |
+| **Information Architecture** | Auto-generate navigation structures and site maps |
+| **ASCII Wireframes** | Create screen layouts in universal text format |
+| **Component Hierarchies** | Extract reusable component trees from designs |
+| **UX Task Analysis** | Identify pain points and optimization opportunities |
+
+### Pro Workflow
+
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│   specify   │───▶│  userflows  │───▶│     ia      │───▶│ wireframes  │
+│  (spec.md)  │    │ (journeys)  │    │ (nav/sitemap)│   │  (screens)  │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+                                                                │
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐           │
+│  implement  │◀───│    tasks    │◀───│    plan     │◀───┬──────┘
+│   (build)   │    │  (+ [UI])   │    │ (+ UX refs) │    │
+└─────────────┘    └─────────────┘    └─────────────┘    │
+                                                         ▼
+                                               ┌─────────────┐
+                                               │ components  │
+                                               │   (tree)    │
+                                               └─────────────┘
+```
+
+### Why Pro?
+
+- **Mobile Apps**: Tab bar navigation, thumb-zone considerations, touch targets
+- **Complex Web Apps**: Multi-level navigation, component reusability analysis
+- **Design Handoff**: ASCII wireframes work everywhere, no design tools needed
+- **Full Traceability**: Every UI component traces back to a user story
 
 ## 🤔 What is Spec-Driven Development?
 
@@ -133,6 +173,99 @@ Use **`/speckit.implement`** to execute all tasks and build your feature accordi
 ```
 
 For detailed step-by-step instructions, see our [comprehensive guide](./spec-driven.md).
+
+## 🎨 UX Workflow for Complex Apps
+
+For mobile apps, complex web applications, or any UI-heavy project, use the enhanced UX workflow:
+
+### 1. Generate User Flows
+
+After creating your spec, generate Mermaid flowcharts for each user journey:
+
+```bash
+/speckit.userflows
+```
+
+This creates `userflows.md` with:
+- Flowchart diagrams for each user story
+- Decision points and error paths
+- Navigation overview showing how flows connect
+
+### 2. Create Information Architecture
+
+Generate navigation structure and content hierarchy:
+
+```bash
+/speckit.ia
+```
+
+This creates `ia.md` with:
+- Primary/secondary/utility navigation
+- Screen inventory with routes
+- Mobile-specific patterns (tab bars, hamburger menus)
+- Deep linking support
+
+### 3. Design Wireframes
+
+Generate ASCII wireframe layouts for all screens:
+
+```bash
+/speckit.wireframes
+```
+
+This creates `wireframes.md` with:
+- Screen layouts using ASCII box drawing
+- Interaction tables for each screen
+- Form validation rules
+- Modal/dialog templates
+- Responsive breakpoint notes
+
+### 4. Extract Components
+
+Generate component hierarchy from wireframes:
+
+```bash
+/speckit.components
+```
+
+This creates `components.md` with:
+- Component tree structure
+- Props and variants for each component
+- Reusability matrix
+- Implementation priority (P1/P2/P3)
+- Design system mapping
+
+### 5. Analyze User Tasks (Optional)
+
+Run UX task analysis for optimization insights:
+
+```bash
+/speckit.tasks-ux
+```
+
+This creates `tasks-ux.md` with:
+- Step-by-step task breakdowns
+- Pain point identification
+- Persona perspectives
+- Success metrics to track
+
+### Example: Mobile Task App
+
+```bash
+# Create the specification
+/speckit.specify Build a mobile task management app with projects, tasks, due dates, and notifications
+
+# Generate UX artifacts
+/speckit.userflows    # Mermaid flows for task creation, assignment, completion
+/speckit.ia           # Tab bar navigation (Projects, Tasks, Notifications, Profile)
+/speckit.wireframes   # ASCII layouts for each screen
+/speckit.components   # TaskCard, ProjectList, NotificationBadge, etc.
+
+# Continue with standard workflow
+/speckit.plan         # References UX artifacts automatically
+/speckit.tasks        # Includes [UI] tasks from components.md
+/speckit.implement    # Build with full UX context
+```
 
 ## 📽️ Video Overview
 
@@ -257,6 +390,18 @@ Essential commands for the Spec-Driven Development workflow:
 | `/speckit.plan`         | Create technical implementation plans with your chosen tech stack        |
 | `/speckit.tasks`        | Generate actionable task lists for implementation                        |
 | `/speckit.implement`    | Execute all tasks to build the feature according to the plan             |
+
+#### UX Commands
+
+Commands for UI/UX-heavy applications (mobile apps, complex web apps):
+
+| Command               | Description                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------- |
+| `/speckit.userflows`  | Generate Mermaid flowchart diagrams for user journeys (run after `/speckit.specify`)  |
+| `/speckit.ia`         | Create information architecture and navigation structure (run after `/speckit.userflows`) |
+| `/speckit.wireframes` | Generate ASCII wireframe layouts for all screens (run after `/speckit.ia`)            |
+| `/speckit.components` | Extract UI component hierarchy from wireframes (run after `/speckit.wireframes`)      |
+| `/speckit.tasks-ux`   | Analyze user tasks for UX optimization (can run after `/speckit.specify`)             |
 
 #### Optional Commands
 

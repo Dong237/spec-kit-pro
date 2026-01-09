@@ -29,6 +29,12 @@ You **MUST** consider the user input before proceeding (if not empty).
 2. **Load design documents**: Read from FEATURE_DIR:
    - **Required**: plan.md (tech stack, libraries, structure), spec.md (user stories with priorities)
    - **Optional**: data-model.md (entities), contracts/ (API endpoints), research.md (decisions), quickstart.md (test scenarios)
+   - **UX Artifacts** (for UI-heavy apps):
+     - components.md (component hierarchy and priorities)
+     - wireframes.md (screen layouts)
+     - ia.md (navigation structure)
+     - userflows.md (user journeys)
+     - tasks-ux.md (task analysis)
    - Note: Not all projects have all documents. Generate tasks based on what's available.
 
 3. **Execute task generation workflow**:
@@ -37,6 +43,7 @@ You **MUST** consider the user input before proceeding (if not empty).
    - If data-model.md exists: Extract entities and map to user stories
    - If contracts/ exists: Map endpoints to user stories
    - If research.md exists: Extract decisions for setup tasks
+   - If components.md exists: Extract UI component tasks with [UI] label (see UI Task Generation below)
    - Generate tasks organized by user story (see Task Generation Rules below)
    - Generate dependency graph showing user story completion order
    - Create parallel execution examples per user story
@@ -138,3 +145,38 @@ Every task MUST strictly follow this format:
   - Within each story: Tests (if requested) → Models → Services → Endpoints → Integration
   - Each phase should be a complete, independently testable increment
 - **Final Phase**: Polish & Cross-Cutting Concerns
+
+### UI Task Generation (from components.md)
+
+When `components.md` exists, generate UI-specific tasks:
+
+1. **Extract component hierarchy** from components.md
+2. **Generate tasks by implementation priority**:
+   - P1 components (Button, Input, Card, Icon, Layout) → Foundational phase
+   - P2 components (feature-specific) → User Story phases
+   - P3 components (enhancements) → Polish phase
+
+3. **Task format for UI components**:
+   ```text
+   - [ ] T0XX [P] [UI] Create [ComponentName] component in src/components/[category]/[ComponentName]
+   ```
+
+4. **Include for each component task**:
+   - Props interface from components.md
+   - Variants to implement
+   - Accessibility requirements (ARIA labels, keyboard nav)
+
+5. **Group related UI tasks**:
+   - Shared components before page components
+   - Layout components before feature components
+   - Mark [P] for components with no inter-dependencies
+
+**Example UI Tasks**:
+```text
+- [ ] T010 [P] [UI] Create Button component with primary/secondary/ghost variants in src/components/shared/Button
+- [ ] T011 [P] [UI] Create Input component with icon support in src/components/shared/Input
+- [ ] T012 [P] [UI] Create Card component with elevated/outlined variants in src/components/shared/Card
+- [ ] T015 [UI] Create Header layout component in src/components/layout/Header
+- [ ] T016 [UI] Create TabBar navigation component in src/components/layout/TabBar
+- [ ] T020 [US1] [UI] Create ItemCard component in src/components/items/ItemCard
+```

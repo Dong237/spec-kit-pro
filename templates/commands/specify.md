@@ -1,6 +1,10 @@
 ---
 description: Create or update the feature specification from a natural language feature description.
-handoffs: 
+handoffs:
+  - label: Create User Flows
+    agent: speckit.userflows
+    prompt: Generate user journey flows from the specification
+    send: true
   - label: Build Technical Plan
     agent: speckit.plan
     prompt: Create a plan for the spec. I am building with...
