@@ -174,7 +174,21 @@ Use **`/speckit.implement`** to execute all tasks and build your feature accordi
 
 For detailed step-by-step instructions, see our [comprehensive guide](./spec-driven.md).
 
+---
+
+<div align="center">
+
 ## 🎨 UX Workflow for Complex Apps
+
+### ✨ **THE PRO DIFFERENCE** ✨
+
+*This is what sets Spec Kit Pro apart from the standard toolkit*
+
+</div>
+
+> **📱 Building a mobile app? Complex web UI? Multi-screen dashboard?**
+>
+> The UX Workflow generates complete design artifacts that bridge the gap between requirements and implementation. No design tools needed — everything stays in version control as Markdown.
 
 For mobile apps, complex web applications, or any UI-heavy project, use the enhanced UX workflow:
 
