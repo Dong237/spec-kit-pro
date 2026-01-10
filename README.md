@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/Dong237/spec-kit/actions/workflows/release.yml"><img src="https://github.com/Dong237/spec-kit/actions/workflows/release.yml/badge.svg" alt="Release"/></a>
-    <a href="https://github.com/Dong237/spec-kit/stargazers"><img src="https://img.shields.io/github/stars/Dong237/spec-kit?style=social" alt="GitHub stars"/></a>
-    <a href="https://github.com/Dong237/spec-kit/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Dong237/spec-kit" alt="License"/></a>
-    <a href="https://github.com/Dong237/spec-kit"><img src="https://img.shields.io/badge/docs-GitHub-blue" alt="Documentation"/></a>
+    <a href="https://github.com/Dong237/spec-kit-pro/actions/workflows/release.yml"><img src="https://github.com/Dong237/spec-kit-pro/actions/workflows/release.yml/badge.svg" alt="Release"/></a>
+    <a href="https://github.com/Dong237/spec-kit-pro/stargazers"><img src="https://img.shields.io/github/stars/Dong237/spec-kit-pro?style=social" alt="GitHub stars"/></a>
+    <a href="https://github.com/Dong237/spec-kit-pro/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Dong237/spec-kit-pro" alt="License"/></a>
+    <a href="https://github.com/Dong237/spec-kit-pro"><img src="https://img.shields.io/badge/docs-GitHub-blue" alt="Documentation"/></a>
 </p>
 
 ---
@@ -91,28 +91,28 @@ Choose your preferred installation method:
 Install once and use everywhere:
 
 ```bash
-uv tool install specify-cli-pro --from git+https://github.com/Dong237/spec-kit.git
+uv tool install spec-kit-pro --from git+https://github.com/Dong237/spec-kit-pro.git
 ```
 
 Then use the tool directly:
 
 ```bash
 # Create new project
-specify init <PROJECT_NAME>
+specify-pro init <PROJECT_NAME>
 
 # Or initialize in existing project
-specify init . --ai claude
+specify-pro init . --ai claude
 # or
-specify init --here --ai claude
+specify-pro init --here --ai claude
 
 # Check installed tools
-specify check
+specify-pro check
 ```
 
 To upgrade Specify Pro, see the [Upgrade Guide](./docs/upgrade.md) for detailed instructions. Quick upgrade:
 
 ```bash
-uv tool install specify-cli-pro --force --from git+https://github.com/Dong237/spec-kit.git
+uv tool install spec-kit-pro --force --from git+https://github.com/Dong237/spec-kit-pro.git
 ```
 
 #### Option 2: One-time Usage
@@ -120,7 +120,7 @@ uv tool install specify-cli-pro --force --from git+https://github.com/Dong237/sp
 Run directly without installing:
 
 ```bash
-uvx --from git+https://github.com/Dong237/spec-kit.git specify init <PROJECT_NAME>
+uvx --from git+https://github.com/Dong237/spec-kit-pro.git specify-pro init <PROJECT_NAME>
 ```
 
 **Benefits of persistent installation:**
@@ -312,7 +312,7 @@ Want to see Spec Kit in action? Watch our [video overview](https://www.youtube.c
 
 ## 🔧 Specify CLI Reference
 
-The `specify` command supports the following options:
+The `specify-pro` command supports the following options:
 
 ### Commands
 
@@ -321,7 +321,7 @@ The `specify` command supports the following options:
 | `init`  | Initialize a new Specify project from the latest template                                                                                               |
 | `check` | Check for installed tools (`git`, `claude`, `gemini`, `code`/`code-insiders`, `cursor-agent`, `windsurf`, `qwen`, `opencode`, `codex`, `shai`, `qoder`) |
 
-### `specify init` Arguments & Options
+### `specify-pro init` Arguments & Options
 
 | Argument/Option        | Type     | Description                                                                                                                                                                                  |
 | ---------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -340,58 +340,58 @@ The `specify` command supports the following options:
 
 ```bash
 # Basic project initialization
-specify init my-project
+specify-pro init my-project
 
 # Initialize with specific AI assistant
-specify init my-project --ai claude
+specify-pro init my-project --ai claude
 
 # Initialize with Cursor support
-specify init my-project --ai cursor-agent
+specify-pro init my-project --ai cursor-agent
 
 # Initialize with Qoder support
-specify init my-project --ai qoder
+specify-pro init my-project --ai qoder
 
 # Initialize with Windsurf support
-specify init my-project --ai windsurf
+specify-pro init my-project --ai windsurf
 
 # Initialize with Amp support
-specify init my-project --ai amp
+specify-pro init my-project --ai amp
 
 # Initialize with SHAI support
-specify init my-project --ai shai
+specify-pro init my-project --ai shai
 
 # Initialize with IBM Bob support
-specify init my-project --ai bob
+specify-pro init my-project --ai bob
 
 # Initialize with PowerShell scripts (Windows/cross-platform)
-specify init my-project --ai copilot --script ps
+specify-pro init my-project --ai copilot --script ps
 
 # Initialize in current directory
-specify init . --ai copilot
+specify-pro init . --ai copilot
 # or use the --here flag
-specify init --here --ai copilot
+specify-pro init --here --ai copilot
 
 # Force merge into current (non-empty) directory without confirmation
-specify init . --force --ai copilot
+specify-pro init . --force --ai copilot
 # or
-specify init --here --force --ai copilot
+specify-pro init --here --force --ai copilot
 
 # Skip git initialization
-specify init my-project --ai gemini --no-git
+specify-pro init my-project --ai gemini --no-git
 
 # Enable debug output for troubleshooting
-specify init my-project --ai claude --debug
+specify-pro init my-project --ai claude --debug
 
 # Use GitHub token for API requests (helpful for corporate environments)
-specify init my-project --ai claude --github-token ghp_your_token_here
+specify-pro init my-project --ai claude --github-token ghp_your_token_here
 
 # Check system requirements
-specify check
+specify-pro check
 ```
 
 ### Available Slash Commands
 
-After running `specify init`, your AI coding agent will have access to these slash commands for structured development:
+After running `specify-pro init`, your AI coding agent will have access to these slash commands for structured development:
 
 #### Core Commands
 
@@ -501,19 +501,19 @@ If you encounter issues with an agent, please open an issue so we can refine the
 You can use the Specify CLI to bootstrap your project, which will bring in the required artifacts in your environment. Run:
 
 ```bash
-specify init <project_name>
+specify-pro init <project_name>
 ```
 
 Or initialize in the current directory:
 
 ```bash
-specify init .
+specify-pro init .
 # or use the --here flag
-specify init --here
+specify-pro init --here
 # Skip confirmation when the directory already has files
-specify init . --force
+specify-pro init . --force
 # or
-specify init --here --force
+specify-pro init --here --force
 ```
 
 ![Specify CLI bootstrapping a new project in the terminal](./media/specify_cli.gif)
@@ -521,29 +521,29 @@ specify init --here --force
 You will be prompted to select the AI agent you are using. You can also proactively specify it directly in the terminal:
 
 ```bash
-specify init <project_name> --ai claude
-specify init <project_name> --ai gemini
-specify init <project_name> --ai copilot
+specify-pro init <project_name> --ai claude
+specify-pro init <project_name> --ai gemini
+specify-pro init <project_name> --ai copilot
 
 # Or in current directory:
-specify init . --ai claude
-specify init . --ai codex
+specify-pro init . --ai claude
+specify-pro init . --ai codex
 
 # or use --here flag
-specify init --here --ai claude
-specify init --here --ai codex
+specify-pro init --here --ai claude
+specify-pro init --here --ai codex
 
 # Force merge into a non-empty current directory
-specify init . --force --ai claude
+specify-pro init . --force --ai claude
 
 # or
-specify init --here --force --ai claude
+specify-pro init --here --force --ai claude
 ```
 
 The CLI will check if you have Claude Code, Gemini CLI, Cursor CLI, Qwen CLI, opencode, Codex CLI, Qoder CLI, or Amazon Q Developer CLI installed. If you do not, or you prefer to get the templates without checking for the right tools, use `--ignore-agent-tools` with your command:
 
 ```bash
-specify init <project_name> --ai claude --ignore-agent-tools
+specify-pro init <project_name> --ai claude --ignore-agent-tools
 ```
 
 ### **STEP 1:** Establish project principles
@@ -802,7 +802,7 @@ rm gcm-linux_amd64.2.6.1.deb
 
 ## 💬 Support
 
-For support, please open a [GitHub issue](https://github.com/Dong237/spec-kit/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
+For support, please open a [GitHub issue](https://github.com/Dong237/spec-kit-pro/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
 
 ## 🙏 Acknowledgements
 

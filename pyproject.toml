@@ -1,7 +1,7 @@
 [project]
-name = "specify-cli-pro"
+name = "spec-kit-pro"
 version = "1.0.0"
-description = "Specify CLI Pro - Spec Kit with full UI/UX support for complex apps and mobile development."
+description = "Spec Kit Pro - Spec-Driven Development toolkit with full UI/UX support for complex apps and mobile development."
 requires-python = ">=3.11"
 dependencies = [
     "typer",
@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-specify = "specify_cli:main"
+specify-pro = "specify_cli:main"
 
 [build-system]
 requires = ["hatchling"]
