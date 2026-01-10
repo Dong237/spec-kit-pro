@@ -1229,6 +1229,20 @@ def init(
     console.print()
     console.print(steps_panel)
 
+    # Pro UX Workflow commands
+    ux_lines = [
+        "[bold magenta]NEW IN PRO:[/bold magenta] UX commands for mobile apps & complex UI projects",
+        "",
+        "○ [cyan]/speckit.userflows[/] - Generate Mermaid flowcharts for user journeys (after [cyan]/speckit.specify[/])",
+        "○ [cyan]/speckit.ia[/] - Create information architecture & navigation structure (after [cyan]/speckit.userflows[/])",
+        "○ [cyan]/speckit.wireframes[/] - Generate ASCII wireframe layouts for all screens (after [cyan]/speckit.ia[/])",
+        "○ [cyan]/speckit.components[/] - Extract UI component hierarchy from wireframes (after [cyan]/speckit.wireframes[/])",
+        "○ [cyan]/speckit.tasks-ux[/] - Analyze user tasks for UX optimization (after [cyan]/speckit.specify[/])",
+    ]
+    ux_panel = Panel("\n".join(ux_lines), title="Pro UX Workflow", border_style="magenta", padding=(1,2))
+    console.print()
+    console.print(ux_panel)
+
     enhancement_lines = [
         "Optional commands that you can use for your specs [bright_black](improve quality & confidence)[/bright_black]",
         "",
